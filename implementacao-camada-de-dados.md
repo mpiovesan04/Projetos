@@ -1,4 +1,4 @@
-Claro! Aqui está um exemplo de um documento de plano de tags estruturado em Markdown:
+Documento  de plano de tags:
 
 ```markdown
 # Plano de Tags para [Nome do Site]
@@ -28,6 +28,42 @@ Este documento descreve o plano de implementação de tags usando o Google Tag M
 - **Acionador**: Todas as Páginas
 
 #### 4.1.2. Eventos Personalizados
+
+- **Nome da Tag**: GA4 - All Events
+  - **Tipo de Tag**: Google Analytics: GA4 Event
+  - **Momento de Disparo**: No clique dos botões do chat
+  - **Onde**: No icone e links para abrir o chat que aparecem em todas as páginas do site
+  - **Nome do Evento**: event
+  - **Parâmetros**:
+    - `event_category`: `xpto:geral`,
+    - `event_action`: `clique`,
+    - `event_label`: `chat`,
+    - `customDimension`: `{{tipoErro}}`,
+  - **Acionador**: Clique em Botão
+
+| **Nome dimensão**| **Descrição**| **Escopo** | **Exemplo** |
+|------------------|-----------------------|------------------------------------|---------|
+| tipoErro         | Deve retornar o tipo do erro apresentado   | Evento|'erro-400', etc|
+
+
+
+"Quando: No clique dos botões do chat
+Onde:  No icone e links para abrir o chat que aparecem em todas as páginas do site
+Título ou nome do botão/link:  Chat"
+"Quando: No carregamento de erros genéricos que surgem durante a navegação referente a problemas de servidor no site.
+Onde:  Nos modais de erros em todas as páginas do site
+"
+"Quando: No carregamento de página not found.
+Onde:  Nas páginas 404 do site
+"
+"Quando: No clique dos botões de simular financiamento
+Onde:  No botões para transferir pro site de financiamento no banner da home
+Título ou nome do botão/link:  Simule Financiamento"
+
+
+
+
+
 - **Nome da Tag**: GA4 - Evento - Clique em Botão
   - **Tipo de Tag**: Google Analytics: GA4 Event
   - **Nome do Evento**: click_button
